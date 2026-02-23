@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -8,19 +7,14 @@
 
 <style>
 :root {
-  --primary: #6a3fb5;
+  --primary: #4b2e83;
   --primary-light: #6a3fb5;
-  --background: #ffffff;
+  --background: #f4f2fa;
   --card-bg: #ffffff;
   --text-dark: #1f1f2e;
 }
 
 * { box-sizing: border-box; }
-
-html {
-  -webkit-text-size-adjust: 100%;
-  hyphens: none;
-}
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
@@ -29,24 +23,6 @@ body {
   padding: 0;
   color: var(--text-dark);
   font-size: 16px;
-  overflow-x: hidden;
-}
-
-.cost {
-  color: var(--primary);
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.footer strong {
-  white-space: nowrap;
-}
-
-.node,
-.node span,
-.node strong {
-  word-break: normal;
-  overflow-wrap: anywhere;
 }
 
 .cover {
@@ -57,7 +33,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 24px;
-  background: var(--primary);
+  background: linear-gradient(135deg,var(--primary),var(--primary-light));
   color: white;
 }
 
@@ -85,7 +61,9 @@ body {
   transition: all .3s ease;
 }
 
-.start-btn:hover { transform: translateY(-2px); }
+.start-btn:hover {
+  transform: translateY(-2px);
+}
 
 .section { padding: 30px 16px 60px 16px; }
 
@@ -100,7 +78,6 @@ body {
   font-size: 1rem;
   transition: all .3s ease;
   position: relative;
-  line-height: 1.55;
 }
 
 .node:hover { transform: translateY(-2px); }
@@ -112,7 +89,10 @@ body {
   background: linear-gradient(135deg,#ffffff,#f3effc);
 }
 
-.clickable-title { font-weight: 700; color: var(--primary); }
+.clickable-title {
+  font-weight: 700;
+  color: var(--primary);
+}
 
 .hint {
   font-size: 0.75rem;
@@ -120,6 +100,8 @@ body {
   font-weight: 400;
   margin-left: 6px;
 }
+
+.cost { color: var(--primary); font-weight: 700; }
 
 .children {
   margin-left: 14px;
@@ -157,12 +139,8 @@ body {
   background: #ffffff;
 }
 
-@media (max-width: 768px) {
-  body { font-size: 15px; }
-  .brand { font-size: 1.8rem; }
-  .cover h1 { font-size: 1.25rem; }
-  .node { font-size: 0.95rem; }
-}
+.footer strong { color: var(--primary); }
+
 </style>
 
 <script>
@@ -222,12 +200,12 @@ I. Giai đoạn tại Việt Nam
   </div>
 
   <div class="node" onclick="toggle('hopDong')">
-    <span class="clickable-title">Ký hợp đồng nghề – <span class="cost">4.000 EUR</span></span>
+    <span class="clickable-title">Ký hợp đồng nghề – <span class="cost">4.800 EUR</span></span>
     <span class="hint">Chạm để mở</span>
   </div>
   <div class="children" id="hopDong">
-    <div class="node">Lần 1: <span class="cost">2.000 EUR</span> – Khi ký hợp đồng lần đầu</div>
-    <div class="node">Lần 2: <span class="cost">2.000 EUR</span> – Sau khi nhận visa (áp dụng cho học viên xử lý hồ sơ tại Lila). Trường hợp ngoài cần hoàn thiện khi có hợp đồng scan và trước khi nhận hợp đồng gốc.</div>
+    <div class="node">Lần 1: <span class="cost">2.800 EUR</span> – Khi ký hợp đồng lần đầu</div>
+    <div class="node">Lần 2: <span class="cost">2.000 EUR</span> – khi trả hồ sơ để học viên đi nộp giấy tờ (áp dụng cho học viên xử lý hồ sơ tại Lila). Trường hợp ngoài cần hoàn thiện khi có hợp đồng scan và trước khi nhận hợp đồng gốc.</div>
     <div class="node" onclick="toggle('hocPhiDuc')">
       <span class="clickable-title">Học phí tại Đức – <span class="cost">1.600 EUR / 4 tháng</span> (400 EUR/tháng)</span>
       <span class="hint">Chạm để mở</span>
@@ -295,10 +273,10 @@ II. Giai đoạn tại Đức
 III. Tổng chi phí
 </div>
 <div class="children" id="tongChiPhi">
-  <div class="node">Phí dịch vụ: <span class="cost">4.000 EUR</span></div>
+  <div class="node">Phí dịch vụ: <span class="cost">4.800 EUR</span></div>
   <div class="node">Học phí tại Đức: <span class="cost">1.600 EUR / 4 tháng</span> (400 EUR/tháng)</div>
   <div class="node">Chứng minh tài chính: <span class="cost">4.364 EUR</span></div>
-  <div class="node">Tổng EUR: <span class="cost">9.964 EUR</span></div>
+  <div class="node">Tổng EUR: <span class="cost">10.764 EUR</span></div>
   <div class="node">+ Tổng học tiếng A1 + A2 + B1: <span class="cost">51.000.000 VND</span></div>
 </div>
 
